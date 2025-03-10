@@ -1,3 +1,5 @@
+import 'package:banking_app/helpers/app_routing.dart';
+import 'package:banking_app/helpers/routes.dart';
 import 'package:banking_app/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(textTheme: AppTheme.textTheme),
-      home: Scaffold(),
+      initialRoute: Routes.onboardingView,
+      onGenerateRoute: AppRouting.onGeneratedRoute,
     );
   }
 }
