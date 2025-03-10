@@ -1,4 +1,5 @@
 import 'package:banking_app/widgets/operations_grid_widget.dart';
+import 'package:banking_app/widgets/recent_transactions_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeBodyContent extends StatelessWidget {
@@ -6,11 +7,12 @@ class HomeBodyContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
-          children: [SizedBox(height: 35.00), const OperationsGridWidget()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [OperationsGridWidget(), RecentTransactionsWidget()],
         ),
       ),
     );

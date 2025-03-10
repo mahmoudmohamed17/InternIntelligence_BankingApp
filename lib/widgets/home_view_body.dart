@@ -11,7 +11,7 @@ class HomeViewBody extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 175),
+          padding: EdgeInsets.only(top: 210),
           child: HomeBodyContent(),
         ),
         Align(alignment: Alignment.topCenter, child: HomeViewAppBar()),
