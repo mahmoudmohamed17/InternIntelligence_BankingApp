@@ -3,8 +3,8 @@ class Assets {
   Assets._();
   
   /// Assets for imagesCoin
-  /// assets/images/coin.svg
-  static const String imagesCoin = "assets/images/coin.svg";
+  /// assets/images/coin.png
+  static const String imagesCoin = "assets/images/coin.png";
 
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png
