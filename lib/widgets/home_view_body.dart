@@ -1,3 +1,4 @@
+import 'package:banking_app/widgets/home_body_content.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -5,6 +6,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Stack(clipBehavior: Clip.none, children: [HomeBodyContent()]);
   }
 }
