@@ -7,8 +7,18 @@ import 'package:banking_app/utils/custom_button.dart';
 import 'package:banking_app/views/home_view.dart';
 import 'package:flutter/material.dart';
 
-class OnboardingViewBody extends StatelessWidget {
+class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
+
+  @override
+  State<OnboardingViewBody> createState() => _OnboardingViewBodyState();
+}
+
+class _OnboardingViewBodyState extends State<OnboardingViewBody> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,22 +71,21 @@ class OnboardingViewBody extends StatelessWidget {
                   ),
                 ),
                 child: Center(
-                  child: SafeArea(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Elite Bank',
-                          style: AppTextStyles.bold28.copyWith(
-                            color: Colors.white,
-                          ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Elite Bank',
+                        style: AppTextStyles.bold28.copyWith(
+                          color: Colors.white,
                         ),
-                        Image.asset(
-                          Assets.imagesOnboarding,
-                          height: context.height * 0.55,
-                        ),
-                      ],
-                    ),
+                      ),
+                      Image.asset(
+                        Assets.imagesOnboarding,
+                        height: context.height * 0.55,
+                      ),
+                    ],
                   ),
                 ),
               ),

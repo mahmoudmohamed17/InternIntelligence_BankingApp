@@ -31,7 +31,10 @@ class OperationItem extends StatelessWidget {
                     )
                     : Icon(model.icon, color: Colors.white),
           ),
-          Text(model.title, style: AppTextStyles.medium12),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(model.title, style: AppTextStyles.bold14.copyWith(fontSize: 10.00)),
+          ),
         ],
       ),
     );

@@ -10,7 +10,10 @@ class HomeViewBody extends StatelessWidget {
     return const Stack(
       clipBehavior: Clip.none,
       children: [
-        HomeBodyContent(),
+        Padding(
+          padding: EdgeInsets.only(top: 175),
+          child: HomeBodyContent(),
+        ),
         Align(alignment: Alignment.topCenter, child: HomeViewAppBar()),
       ],
     );
