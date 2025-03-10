@@ -1,8 +1,10 @@
 import 'package:banking_app/helpers/assets.dart';
 import 'package:banking_app/helpers/context_extension.dart';
+import 'package:banking_app/helpers/navigation_extension.dart';
 import 'package:banking_app/themes/app_colors.dart';
 import 'package:banking_app/themes/app_text_styles.dart';
 import 'package:banking_app/utils/custom_button.dart';
+import 'package:banking_app/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingViewBody extends StatelessWidget {
@@ -37,7 +39,12 @@ class OnboardingViewBody extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 32),
-                    CustomButton(label: 'Continue', onPressed: () {}),
+                    CustomButton(
+                      label: 'Continue',
+                      onPressed: () {
+                        context.pushNamed(HomeView.id);
+                      },
+                    ),
                   ],
                 ),
               ),

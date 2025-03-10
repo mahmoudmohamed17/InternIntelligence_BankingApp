@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 final List<OperationModel> _operations = [
-  OperationModel(icon: FontAwesomeIcons.upLong, onTap: () {}),
-  OperationModel(icon: FontAwesomeIcons.downLong, onTap: () {}),
-  OperationModel(icon: FontAwesomeIcons.fileInvoiceDollar, onTap: () {}),
-  OperationModel(icon: Icons.swap_vert, onTap: () {}),
-  OperationModel(icon: FontAwesomeIcons.circleDollarToSlot, onTap: () {}),
-  OperationModel(icon: FontAwesomeIcons.creditCard, onTap: () {}),
-  OperationModel(icon: FontAwesomeIcons.coins, onTap: () {}),
-  OperationModel(icon: FontAwesomeIcons.chartSimple, onTap: () {}),
+  OperationModel( title: 'Send',  icon: FontAwesomeIcons.upLong, onTap: () {}),
+  OperationModel( title: 'Receive', icon: FontAwesomeIcons.downLong, onTap: () {}),
+  OperationModel(title: 'Bills', icon: FontAwesomeIcons.fileInvoiceDollar, onTap: () {}),
+  OperationModel( title: 'Transaction', icon: FontAwesomeIcons.rightLeft, onTap: () {}),
+  OperationModel( title: 'Loans', icon: FontAwesomeIcons.circleDollarToSlot, onTap: () {}),
+  OperationModel( title: 'Credit Card', icon: FontAwesomeIcons.creditCard, onTap: () {}),
+  OperationModel(title: 'Mutual Fund', icon: FontAwesomeIcons.coins, onTap: () {}),
+  OperationModel(title: 'Fixed Deposits', icon: FontAwesomeIcons.chartSimple, onTap: () {}),
 ];
 
 class OperationsGridWidget extends StatelessWidget {
@@ -22,8 +22,6 @@ class OperationsGridWidget extends StatelessWidget {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
-        mainAxisSpacing: 8.00,
-        crossAxisSpacing: 4.00,
       ),
       shrinkWrap: true,
       itemCount: _operations.length,
